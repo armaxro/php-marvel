@@ -21,7 +21,7 @@ curl_close($ch);
     <meta name="description" content="La proxima pelicula de Marvel"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/pico.min.css" />
-    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="icons8-star.gif">
 </head>
 <main>
     <h1>La proxima película de Marvel</h1>
