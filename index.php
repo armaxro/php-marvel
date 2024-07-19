@@ -27,19 +27,19 @@ curl_close($ch);
     <h1>La proxima película de Marvel</h1>
     <section>
         <img src="<?= $data["poster_url"]; ?>" width="300" alt="Poster de <?=$data["poster_url"]; ?>"
-        style="border-radius: 20px; border: 5px double gold" />
+        />
     </section>
     <hgroup>
         <h2><?= $data["title"]; ?> se estrena en <?= $data["days_until"];?> dias</h2>
         <p>Fecha de estreno: <?= $data["release_date"];?> </p>
-        <p>La siguiente pelicula es: <?= $data["following_production"]["title"];?></p>
+        <p>La siguiente pelicula es: <span><?= $data["following_production"]["title"];?> </span></p>
     </hgroup>
 </main>
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Imprima&display=swap');
     :root {
-        background-image: url("colorkit2.png");
+        background-image: url("colorkit(4).png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -54,11 +54,17 @@ curl_close($ch);
         font-size: 60px;
         font-style: italic;
         color: transparent;
-        background: #000000;
+        background: rgba(0, 0, 0, 0.8);
         -webkit-background-clip: text;
         -moz-background-clip: text;
         background-clip: text;
-        text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+        text-shadow: 1px 3px 3px rgba(255, 255, 255, 0.3);
+    }
+    img{
+        border-radius: 101px 51px 101px 51px;
+        -webkit-border-radius: 101px 51px 101px 51px;
+        -moz-border-radius: 101px 51px 101px 51px;
+        border: 10px solid #ffd700;
     }
     section{
         display: flex;
@@ -82,11 +88,19 @@ curl_close($ch);
             font-size: 24px;
             font-weight: 800;
             color: transparent;
-            background: black;
+            background: rgb(0, 0, 0);
             -webkit-background-clip: text;
             -moz-background-clip: text;
             background-clip: text;
-            text-shadow: 1px 3px 3px rgba(255, 255, 255, 0.4);
+            text-shadow: 1px 3px 3px rgba(255, 255, 255, 0.3);
+        }
+        span{
+            font-family: "Fira Sans", sans-serif;
+            font-size: 24px;
+            font-weight: 100;
+            text-shadow: 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+            color: gold;
+
         }
     }
 </style>
